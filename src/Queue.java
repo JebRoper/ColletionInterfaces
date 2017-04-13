@@ -3,15 +3,22 @@ import java.util.List;
 
 public class Queue<E> {
 
-    public List<E> que = new LinkedList<>();
+    List<E> queue = new LinkedList<>();
 
     public void add(E e) {
-     //   que.add((E) "TicketA");
-       // que.add((E) "TicketB");
-
+        queue.add(e);
     }
-    public E remove() {
-        return null;
 
+    public E remove() {
+        if (queue.isEmpty()){
+            return null;
+        }
+        return queue.remove(0);
+    }
+
+    @Override
+    public String toString() {
+        return "queue=" + queue +
+                '}';
     }
 }
